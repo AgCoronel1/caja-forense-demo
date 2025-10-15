@@ -1,0 +1,36 @@
+<div class="dialog-container">
+  <div class="dialog-header">
+    <h2>{{ data.title }}</h2>
+  </div>
+
+  <div class="dialog-content">
+    <mat-card class="product-card">
+      <div class="images-gallery">
+        <div class="image-list">
+          <img *ngFor="let img of data.images" [src]="img" [alt]="data.title" />
+        </div>
+      </div>
+
+      <mat-card-content>
+        <p class="description">{{ data.description }}</p>
+
+        <mat-divider></mat-divider>
+
+        <div class="info-grid">
+          <div><strong>Precio:</strong> ${{ data.price }}</div>
+          <div><strong>Descuento:</strong> {{ data.discountPercentage }}%</div>
+          <div ><strong>Rating:</strong> {{ data.rating + ' / 5' }}</div>
+          <div><strong>Stock:</strong> {{ data.stock }}</div>
+          <div><strong>Marca:</strong> {{ data.brand }}</div>
+          <div><strong>Categoría:</strong> {{ data.category }}</div>
+        </div>
+
+        <mat-divider></mat-divider>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="dialog-actions">
+    <button mat-flat-button color="primary" (click)="close()"><span style="color: white;">Cerrar</span></button>
+  </div>
+</div>

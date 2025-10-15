@@ -1,1 +1,143 @@
-/* You can add global styles to this file, and also import other style files */
+
+   @import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+   $primary-color: #006F3D;         
+   $warn-color: #FF5C5C;           
+   $background-color: #F4F4F4;      
+   $text-color: #333333;            
+   $highlight-color: #FFD700;       
+
+
+   body {
+     background-color: $background-color;
+     color: $text-color;
+     font-family: 'Roboto' !important;
+     margin: 0;
+     padding: 0;
+   }
+   
+  
+   .mat-primary {
+     color: $primary-color !important;
+   }
+   
+   .mat-accent {
+     color: $highlight-color !important;
+   }
+   
+   .mat-warn {
+     color: $warn-color !important;
+   }
+   
+
+   .mat-button, .mat-flat-button, .mat-raised-button {
+     background-color: $primary-color;
+     color: white;
+     text-transform: none;
+     font-weight: 500;
+     border-radius: 8px;
+   
+     &:hover {
+       background-color: $highlight-color;
+     }
+   
+     &:disabled {
+       background-color: #cccccc;
+       color: #666666;
+     }
+   }
+   
+  
+   .mat-form-field {
+     width: 100%;
+   
+     .mat-form-field-outline {
+       border-color: $primary-color !important;
+     }
+   
+     .mat-form-field-label {
+       color: $text-color !important;
+     }
+   
+     &.mat-focused .mat-form-field-outline {
+       border-color: $primary-color !important;
+     }
+   }
+   
+   
+   .mat-input-element::placeholder {
+     color: $text-color;
+     opacity: 1;
+   }
+   
+   
+   
+   .dialog-header {
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     padding: 16px;
+     border-bottom: 1px solid #ddd;
+     font-size: 1.25rem;
+     font-weight: 500;
+   }
+   
+   .form-container {
+     padding: 16px;
+   }
+   
+   .section-title {
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     font-weight: 600;
+     color: $primary-color;
+     margin-bottom: 8px;
+   }
+   
+   .form-row {
+     display: flex;
+     gap: 16px;
+     margin-bottom: 16px;
+   
+     &.full-width {
+       flex-direction: column;
+     }
+   
+     &.triple {
+       gap: 12px;
+     }
+   }
+   
+   .half-width {
+     flex: 1;
+   }
+   
+   .third-width {
+     flex: 1;
+   }
+   
+   .dialog-actions {
+     display: flex;
+     justify-content: flex-end;
+     gap: 8px;
+     padding-top: 8px;
+     border-top: 1px solid #ddd;
+   }
+   
+
+
+   ::ng-deep .mat-mdc-dialog-container {
+    --mdc-dialog-container-color: #fff;
+    --mdc-dialog-container-shape: 12px;
+    --mdc-dialog-container-elevation: 8;
+    padding: 0;
+  }
+  
+  ::ng-deep .cdk-overlay-pane {
+    max-width: 95vw !important;   /* ocupa casi todo el ancho */
+    max-height: 95vh !important;  /* ocupa casi todo el alto */
+    width: 95vw !important;
+    height: 95vh !important;
+  }
+  

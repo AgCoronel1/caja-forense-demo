@@ -1,0 +1,46 @@
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        table-layout: fixed;
+        min-width: 100%;
+    }
+
+    th, td {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    th.mat-column-id {
+        width: 10%;
+    }
+
+    th.mat-column-thumbnail {
+        width: 10%;
+    }
+
+    th.mat-column-title {
+        width: 35%;
+    }
+
+    th.mat-column-price {
+        width: 15%;
+    }
+
+    th.mat-column-stock {
+        width: 15%;
+    }
+
+    th.mat-column-actions {
+        width: 15%;
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+    }
