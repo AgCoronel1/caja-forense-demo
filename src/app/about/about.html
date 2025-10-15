@@ -1,15 +1,22 @@
-<div class="d-flex justify-content-center mt-4">
+<div class="d-flex justify-content-center mt-5">
     <mat-card class="about-card p-4 text-center">
-      
-      <img [src]="foto" class="about-photo justify-center mb-3">
-      
+
+      <div class="d-flex justify-content-center mb-3">
+        <img [src]="foto" alt="Foto de {{nombre}}" class="about-photo">
+      </div>
+  
       <h2 class="fw-bold">{{ nombre }}</h2>
       <h5 class="text-muted">{{ puesto }} en {{ empresa }}</h5>
-      
-      <p class="mt-3">{{ descripcion }}</p>
   
-      <div class="mt-3">
-        <span class="ms-2">{{ email }}</span>
+      <p class="mt-3">{{ descripcion }}</p>
+
+      <div class="personal-info mt-3 text-start mx-auto" style="max-width: 100%;">
+        <p><strong>Email:</strong> {{ email }}</p>
+        <p><strong>Teléfono:</strong> {{ telefono }}</p>
+        <p><strong>Ciudad:</strong> {{ ciudad }}</p>
+        <p><strong>LinkedIn:&nbsp;</strong> <a href="{{ linkedin }}" target="_blank">{{ linkedin }}</a></p>
       </div>
+  
     </mat-card>
   </div>
+  
